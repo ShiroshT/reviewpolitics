@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} | Welcome{% endblock title %}
+
+<!-- https://docs.djangoproject.com/en/2.0/ref/templates/language/#template-inheritance -->
+
+{% block content %}
+   <div class='container pt-5'>
+        <div class='col-sm-12'>
+            {% if request.GET.q %}
+               		{% for object in object_list %}
+                    <div class="media">
+                          <div class="media-left'">
+                            <a href="#">
+                              {% if object.image %}
+                                <img class="media-object" src="..." alt="...">
+                             {% endif %}
+                            </a>
+                          </div> 
+        
+                          <div class="media-body">
+                                    {{ object.fullname_polit }}<br/>
+                                    {{ object.dateofbirth_polit }}<br/>
+                                    {{ object.summary_header}}<br/>
+                                    <a href='{{ object.get_absolute_url }}'> See details </a>
+                                    <hr />
+                                    <br/>
+                          </div>
+                    </div>
+        					{% empty %}	
+        							<p> Your search - {{ request.GET.q }} - did not match any Politicians</p>  
+        					{% endfor %}
+
+            {% endif %}
+  </div>
+ <!-- <hr /> -->
+{% endblock content %}
