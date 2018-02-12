@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.conf.urls import include
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 from django.conf import settings
@@ -16,7 +17,6 @@ urlpatterns = [
       # url(r'^(?P<pk>\d+)/$', PolitDetailView.as_view(), name='politdetail'), 
       url(r'^(?P<slug>[\w-]+)/$',PolitDetailView.as_view(), name='politdetail'),
 ]
-
 
 # urlpatterns = [
 #      url(r'^$', RedirectView.as_view(url='/')), 

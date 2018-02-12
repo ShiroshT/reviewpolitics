@@ -28,12 +28,11 @@ from django.conf.urls.static import static
 from .views import home
 from politicians import views
 
-# /from .views import home
-
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^politicians/', include('politicians.urls', namespace='politicians')),
+    # url(r'^politicians/', include('politicians.urls', namespace='politicians')),
+    url(r'^candidates/', include('candidates.urls', namespace='candidates')),
     url(r'^$', home, name = 'home'),
     # url(r'^$', views.PolitListView.as_view(), name = 'home'),
 ]

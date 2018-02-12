@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +28,7 @@ SECRET_KEY = '(^)xpu7m-5-2vm$6h&4t$g2$2!r^5s5**hbsuueb-2lo_61+2f'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MONGO_DATABASE_NAME = 'wikipedia_candidates'
 
 # Application definition
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
 
     # 'accounts',
     # 'hashtags',
+    'candidates',
     'politicians',
 ]
 
@@ -86,13 +88,22 @@ WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'staging': {
+        'ENGINE': 'django.db.backends.dummy',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -145,6 +156,7 @@ STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), "static-serve")
 
 
 CRISPY_TEMPLATE_PACK  = 'bootstrap3'
+
 
 
 

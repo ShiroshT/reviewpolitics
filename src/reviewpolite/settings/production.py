@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+MONGO_DATABASE_NAME = 'wikipedia_candidates'
 # Application definition
 
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # 'accounts',
     # 'hashtags',
+    'candidates',
     'politicians',
 ]
 
@@ -84,12 +85,40 @@ WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'staging': {
+        'ENGINE': 'django.db.backends.dummy',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     },
+
+#     'candidates' : {
+#         'ENGINE' : 'django_mongodb_engine',
+#         'NAME' : 'wikipedia_candidates',
+#         'HOST': 'localhost', 
+#         'PORT': '27017', 
+#         'OPTIONS' : {
+#             'socketTimeoutMS' : 500,
+#         }
+#     }
+# }
 
 
 # Password validation

@@ -1,0 +1,512 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"csv",
+				"csvList"
+			],
+			[
+				"name",
+				"name_candidate"
+			],
+			[
+				"can",
+				"candidate_slug_name"
+			],
+			[
+				"cat",
+				"category_list"
+			],
+			[
+				"m",
+				"max_length"
+			],
+			[
+				"err",
+				"error_x0"
+			],
+			[
+				"pr",
+				"predictions"
+			],
+			[
+				"the",
+				"theta"
+			],
+			[
+				"gradi",
+				"gradient_decent"
+			],
+			[
+				"j",
+				"J_history"
+			],
+			[
+				"test",
+				"test_file_obect"
+			],
+			[
+				"women_o",
+				"women_only_stats"
+			],
+			[
+				"fare",
+				"fare_bracket_size"
+			],
+			[
+				"num",
+				"number_of_price_brackets"
+			],
+			[
+				"su",
+				"survival_table"
+			],
+			[
+				"number_of",
+				"number_of_price_brackets"
+			],
+			[
+				"number",
+				"Number_of_classes"
+			],
+			[
+				"nu",
+				"number_of_price_brackets"
+			],
+			[
+				"read",
+				"read_test_data"
+			],
+			[
+				"pro",
+				"proption_of_women_survived"
+			],
+			[
+				"as",
+				"astype"
+			],
+			[
+				"wom",
+				"women_only_stats"
+			],
+			[
+				"numb",
+				"number_survived"
+			],
+			[
+				"cs",
+				"csv_object_file"
+			],
+			[
+				"a",
+				"aTup"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"d",
+				"divisors"
+			],
+			[
+				"dist_",
+				"dist_graph"
+			],
+			[
+				"wor",
+				"word_list"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"bor",
+				"border-width"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"backgour",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/politicians/models.py",
+			"settings":
+			{
+				"buffer_size": 1149,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/politicians/models.py~",
+			"settings":
+			{
+				"buffer_size": 1044,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "instal pac",
+		"selected_items":
+		[
+			[
+				"instal pac",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Install Package Control"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 143.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/c084217/development/github_projects/reviewpolitics",
+		"/Users/c084217/development/github_projects/reviewpolitics/src",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/settings",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/politicians"
+	],
+	"file_history":
+	[
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians/views.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/views.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/settings/production.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/settings/base.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/settings/local.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians/urls.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/urls.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/main.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians/models.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/project_four/data_extract/write_to_db_latest.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/project_four/data_extract/main.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/databse_staging.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/project_four/data_extract/write_to_db_sources.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/project_four/data_extract/write_to_db_locations_real.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/candidates.csv",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/Maithripala Sirisena ,Ranil Wickremasinghe ,John A",
+		"/Users/c084217/development/github_projects/reviewpolitics/datasource/project_four/data_extract/write_to_db_locations_real.py~",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/footer.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/politicians/search_result.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/base.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/home.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/navbar.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/politicians/politician_detail.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/search_form.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/static-storage/js/custom.js",
+		"/Users/c084217/development/github_projects/reviewpolitics/static-serve/js/custom.js",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/politicians/politician_list.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians/forms.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/politicians/admin.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/index.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/templates/polit/politician_list.html",
+		"/Users/c084217/development/github_projects/reviewpolitics/src/reviewpolite/wsgi.py",
+		"/Users/c084217/development/github_projects/reviewpolitics/reviewpolite/reviewpolite/__init__.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/static-serve/css/custom.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/static-serve/css/bootstrap.min.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/templates/home.html",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/static-storage/css/custom.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/static-storage/static/custom.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/templates/pages/candidate.html",
+		"/Users/c084217/development/github_projects/politco/project_politics/static-serve/admin/css/base.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/static-storage/static/starter-template.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/politico/settings/local.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/pages/forms.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/pages/views.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/pages/urls.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/static-serve/static/custom.css",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/templates/pages/add_candidate.html",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/pages/models.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/politico/views.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/politico/urls.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/pages/apps.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/src/templates/untitled",
+		"/Users/c084217/development/github_projects/politco/project_politics/politico/politico/settings/local.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/politico/politico/settings/__init__.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/politico/politico/settings/base.py",
+		"/Users/c084217/development/github_projects/politco/project_politics/politico/politico/settings/production.py",
+		"/Users/c084217/Documents/projects/kagale/Titanic/pythonmodel/kagaPy.py",
+		"/Users/c084217/Documents/projects/kagale/backup/linear_regression.py",
+		"/Users/c084217/Documents/experiment/pybrain_train/pybrain_test/helloworldpybrain.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/ystockqoute.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/simStag_SP.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/param_SP.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/main_SP.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/extract_SP.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/filters_SP.py",
+		"/Users/c084217/Documents/projects/kagale/backup/linear_regression_scikit.py",
+		"/Users/c084217/Documents/projects/kagale/project_prod/linear_regression.py",
+		"/Users/c084217/Documents/projects/kagale/project_prod/decision_tree_scikit.py",
+		"/Users/c084217/Documents/projects/kagale/project_prod/linear_regression_scikit.py",
+		"/Users/c084217/Documents/projects/trading_model/pairtradingModel/main_pairTrading.py",
+		"/Users/c084217/Documents/experiment/pybrain_train/pybrain_test/classtest.py",
+		"/Users/c084217/Documents/projects/kagale/project_prod/test.py",
+		"/Users/c084217/Documents/projects/email_project/ml_testing/ml2.py",
+		"/Users/c084217/Documents/projects/email_project/ml_testing/ml3.py",
+		"/Users/c084217/Dropbox/LCK/lckTemplate_newversion.html",
+		"/Users/c084217/Documents/projects/email_project/_postgress/scripts/main.py",
+		"/Users/c084217/Documents/projects/email_project/_postgress/scripts/connect.py",
+		"/Users/c084217/Documents/projects/email_project/_postgress/scripts/sentiment_analytics.py",
+		"/Users/c084217/Documents/projects/email_project/datasci_course_materials/assignment1/term_sentiment.py",
+		"/Users/c084217/Documents/projects/email_project/datasci_course_materials/assignment1/twitterstream.py",
+		"/Users/c084217/Documents/projects/email_project/datasci_course_materials/assignment1/tweet_sentiment.py",
+		"/Users/c084217/Documents/projects/email_project/_mongodb/python_scripts/mongocall.py",
+		"/Users/c084217/Documents/projects/email_project/datasci_course_materials/assignment1/AFINN-111.txt",
+		"/Users/c084217/Dropbox/dataScience/Introduction_dataS/assesment1/prob3/datasci_course_materials/assignment1/term_sentiment.py",
+		"/Users/c084217/Dropbox/dataScience/Introduction_dataS/assesment1/prob3/datasci_course_materials/assignment1/tweet_sentiment.py",
+		"/Users/c084217/Documents/siteDevelopment/bootstarp/starter-template.html",
+		"/Users/c084217/Documents/siteDevelopment/bootstarp/assets/css/bootstrap-responsive.css",
+		"/Users/c084217/Documents/siteDevelopment/bootstarp/assets/css/bootstrap.css",
+		"/Users/c084217/Documents/siteDevelopment/bootstarp/assets/css/bootstrap-shirosh.css",
+		"/Users/c084217/Documents/siteDevelopment/bootstarp/assets/css/bootstrap-shirosh",
+		"/Users/c084217/Documents/siteDevelopment/html_development/index.html",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/coffee_script/server.coffee",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/express/static/stylesheets/styles.css",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/express/app.js",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/express/views/root.jade",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/express/views/layout.jade",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/chat_Server.js",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/step_lib.js",
+		"/Users/c084217/Documents/node_take/note_pract/nettuts/tu3.js",
+		"/Users/c084217/Google Drive/startupWork/emailAnalytics/docs/analytics_highlevel_outline.txt",
+		"/Users/c084217/Documents/node_take/note_pract/tutorial/eventEmitter2.js",
+		"/Users/c084217/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"rever",
+			"DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n",
+			"insert",
+			"data",
+			"}\n",
+			");\n",
+			"'/'",
+			"h6",
+			"oline",
+			"olit",
+			"PolitDetailView",
+			"    def get_objects(self):\n        return Candidate.objects.get(id =1)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/politicians/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/politicians/models.py~",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "polienv.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 362.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

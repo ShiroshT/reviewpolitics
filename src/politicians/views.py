@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 from django import forms
 from django.db.models import Q
 from django.shortcuts import render
-from django.forms.utils import ErrorList
-from django.urls import reverse_lazy, reverse
+# from django.urls import reverse_lazy, reverse
 
 from django.views.generic import (
     DeleteView,
@@ -52,6 +51,3 @@ class PolitDetailView(DetailView):
 
     def get_objects(self):
         return Politician.objects.get(id =id)
-
-
-
