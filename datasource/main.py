@@ -35,6 +35,8 @@ def read_wikipedia(csvList, db):
             #try to load the wikipedia page
             page=wikipedia.page(link, auto_suggest=False)
             print page.url, 'writing.. '
+            candid =link
+            candidateSlug = candid.replace(' ', '')
             db.page_url.insert({"candiate_name":link, "url_wiki":page.url})
             db.page_title.insert({"candiate_name":link, "title_wiki":page.title})
             db.page_content.insert({"candiate_name":link, "content_wiki":page.content})
@@ -43,9 +45,9 @@ def read_wikipedia(csvList, db):
             db.page_links.insert({"candiate_name":link, "links_wiki":page.links})
             db.page_sections.insert({"candiate_name":link, "html_sections":page.sections})
             db.page_summary.insert({"candiate_name":link, "html_sections":page.summary})
-
+            db.PageAllCandidates.insert({"candiate_name":link, "url_wiki":page.url, "title_wiki":page.title, "content_wiki": page.content, "reference_wiki":page.references, "candidate_slug":candidateSlug})
             db.page_all.insert({"candiate_name":link, "url_wiki":page.url, "title_wiki":page.title, "content_wiki": page.content, "reference_wiki":page.references})
-
+            db.page_rec.insert({"candiate_name":link, "url_wiki":page.url, "title_wiki":page.title, "content_wiki": page.content, "reference_wiki":page.references, "candidate_slug":candidateSlug})
         except wikipedia.exceptions.PageError:
             #if a "PageError" was raised, ignore it and continue to next link
             continue

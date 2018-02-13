@@ -6,13 +6,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from .views import (
-    CandidateListView,
-    CandidateDetailView	
+    PolitListView,
+    PolitDetailView
 )
 
 
 urlpatterns = [
       url(r'^$', RedirectView.as_view(url='/')), 
       url(r'^search/$', CandidateListView.as_view(), name='candidatelist'), 
-      url(r'^(?P<slug>[\w-]+)/$',EmbeddedDetailView.as_view(), name='candidatedetail'),
+      # url(r'^(?P<pk>\d+)/$', PolitDetailView.as_view(), name='politdetail'), 
+      url(r'^(?P<slug>[\w-]+)/$',CandidateDetailView.as_view(), name='candidatedetail'),
 ]

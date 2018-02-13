@@ -1,0 +1,40 @@
+from __future__ import unicode_literals
+from django.db import models
+import django.db.models.options as options
+from django.conf import settings
+from django.urls import reverse
+from django.db import models
+from django.db.models import F
+from django.core.exceptions import ValidationError
+from django.template.defaultfilters import slugify
+from django.contrib.auth.models import User
+
+
+
+from mongoengine import Document, EmbeddedDocument, fields
+from mongoengine import *
+MONGO_DATABASE_NAME = 'wikipedia_candidates'
+
+DEFAULT_CONNECTION_NAME = connect(MONGO_DATABASE_NAME)
+
+# options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('in_db',)
+
+
+class page_all(Document):
+        _id = fields.StringField()
+        candiate_name= fields.StringField()
+        content_wiki= fields.StringField()
+        reference_wiki= fields.StringField()
+        title_wiki= fields.StringField()
+        url_wiki= fields.StringField()
+
+
+        def __str__(self):
+			return self.shortname
+
+		def save(self, *args, **kwargs):
+	              self.slug = slugify(self.candiate_name)
+		      super(page_all, self).save(*args, **kwargs)		
+
+		def get_absolute_url(self):
+			return reverse("candidates:candidatedetail", kwargs={"slug":self.slug})	

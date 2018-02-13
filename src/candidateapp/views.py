@@ -22,7 +22,7 @@ from .models import (
 # class PolitDetailView(DetailView):
 
 
-class PolitListView(ListView):
+class CandidateListView(ListView):
 
     template_name = 'politicians/search_result.html'
 
@@ -46,8 +46,7 @@ class PolitListView(ListView):
         return context
 
 
-class PolitDetailView(DetailView):
+class CandidateDetailView(DetailView):
     queryset = Politician.objects.all()
 
     def get_objects(self):
-        return Politician.objects.get(id =_id)
