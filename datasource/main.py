@@ -56,3 +56,4 @@ if __name__ == "__main__":
     db = get_db()
     csvval = read_csv()
     read_wikipedia(csvval, db)
+

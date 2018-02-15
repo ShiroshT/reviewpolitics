@@ -29,4 +29,35 @@ class Candidate(models.Model):
 	      super(Politician, self).save(*args, **kwargs)		
 
 	def get_absolute_url(self):
-		return reverse("politicians:politdetail", kwargs={"slug":self.slug})	
+		return reverse("politicians:politdetail", kwargs={"slug":self.slug})
+
+
+
+
+class CandidatesWiki(models.Model):
+    candidate_id = models.AutoField(primary_key=True)
+    candiate_name = models.CharField(max_length=255)
+    url_wiki = models.CharField(max_length=255, blank=True, null=True)
+    title_wiki = models.CharField(max_length=255, blank=True, null=True)
+    content_wiki = models.TextField(blank=True, null=True)
+    images_wiki = models.TextField(blank=True, null=True)
+    references_wiki = models.TextField(blank=True, null=True)
+    links_wiki = models.TextField(blank=True, null=True)
+    sections_wiki = models.TextField(blank=True, null=True)
+    summary_wiki = models.TextField(blank=True, null=True)
+    fecha_ini_det = models.DateTimeField(blank=True, null=False)
+    fecha_ini_f = models.DateField(blank=True, null=False)
+    slug = models.SlugField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'candidates_wiki'
+
+    def save(self, *args, **kwargs):
+              self.slug = slugify(self.candiate_name)
+              super(CandidatesWiki, self).save(*args, **kwargs)   
+
+    def get_absolute_url(self):
+        return reverse("candidatesapp:candidatedetail", kwargs={"slug":self.slug})
+
+	

@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # 'accounts',
     # 'hashtags',
-    'candidates',
+    'candidateapp',
     'politicians',
 ]
 
@@ -92,16 +92,26 @@ WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 #     }
 # }
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'staging': {
-        'ENGINE': 'django.db.backends.dummy',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'politics',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     },
+#     'staging': {
+#         'ENGINE': 'django.db.backends.dummy',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {

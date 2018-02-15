@@ -28,7 +28,7 @@ SECRET_KEY = '(^)xpu7m-5-2vm$6h&4t$g2$2!r^5s5**hbsuueb-2lo_61+2f'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-MONGO_DATABASE_NAME = 'wikipedia_candidates'
+# MONGO_DATABASE_NAME = 'wikipedia_candidates'
 
 # Application definition
 
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     # 'accounts',
     # 'hashtags',
-    'candidates',
+    'candidateapp',
     'politicians',
 ]
 
@@ -95,13 +95,26 @@ WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     },
+#     'staging': {
+#         'ENGINE': 'django.db.backends.dummy',
+#     }
+# }
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'staging': {
-        'ENGINE': 'django.db.backends.dummy',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'politics',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 
