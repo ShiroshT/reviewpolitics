@@ -47,15 +47,17 @@ class CandidatesWiki(models.Model):
     summary_wiki = models.TextField(blank=True, null=True)
     fecha_ini_det = models.DateTimeField(blank=True, null=False)
     fecha_ini_f = models.DateField(blank=True, null=False)
-    slug = models.SlugField(max_length=15)
+    slug = models.TextField(max_length=15)
 
     class Meta:
         managed = False
         db_table = 'candidates_wiki'
+        get_latest_by = 'fecha_ini_det'
 
-    def save(self, *args, **kwargs):
-              self.slug = slugify(self.candiate_name)
-              super(CandidatesWiki, self).save(*args, **kwargs)   
+
+    # def save(self, *args, **kwargs):
+    #           self.slug = slugify(self.candiate_name)
+    #           super(CandidatesWiki, self).save(*args, **kwargs)   
 
     def get_absolute_url(self):
         return reverse("candidatesapp:candidatedetail", kwargs={"slug":self.slug})

@@ -72,6 +72,14 @@
       <!-- Portfolio Section -->
       <h2>Biggest Gainers and Losers </h2>
 
+
+          {% if user.is_authenticated %}
+                     <p class="display-4">Hello, {{ user.username }}</p>
+          {% else %}
+                     <a class="lead" href="{% url 'login' %}">Log in</a>
+          {% endif %}
+
+
    <hr/>
        </br>
       <h3>Gaining popularity! </h3>

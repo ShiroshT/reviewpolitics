@@ -1,6 +1,9 @@
-body {
+
+@import '../icons';
+
+/*body {
   padding-top: 3.5rem;
-}
+}*/
 
 #custom-search-input {
         margin:0;
@@ -40,3 +43,12 @@ body {
     .search-query:focus + button {
         z-index: 3;   
     }
+
+/*
+
+font-family: 'Libre Baskerville', serif;
+*/
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}

@@ -22,10 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(^)xpu7m-5-2vm$6h&4t$g2$2!r^5s5**hbsuueb-2lo_61+2f'
+# SECRET_KEY = '(^)xpu7m-5-2vm$6h&4t$g2$2!r^5s5**hbsuueb-2lo_61+2f'------
+
+SECRET_KEY = config('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
+
 
 ALLOWED_HOSTS = []
 # MONGO_DATABASE_NAME = 'wikipedia_candidates'
@@ -40,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'social_django',
     # 'crispy_forms',
     # 'rest_framework',
 
@@ -48,6 +53,7 @@ INSTALLED_APPS = [
     # 'hashtags',
     'candidateapp',
     'politicians',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -58,13 +64,37 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'reviewpolite.urls'
 
+# LOGIN_URL = "/login/"
+# LOGIN_REDIRECT_URL = "/"
+# LOGOUT_REDIRECT_URL = LOGIN_REDIRECT_URL
+
+
+# LOGIN_URL = 'login'
+# LOGOUT_URL = 'logout'
+# LOGIN_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = LOGIN_REDIRECT_URL
+
+
+ROOT_URLCONF = 'reviewpolite.urls'
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = LOGIN_REDIRECT_URL
+# LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/accounts/settings/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/accounts/settings/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 TEMPLATES = [
     {
@@ -77,6 +107,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
@@ -84,6 +116,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+
+SOCIAL_AUTH_GITHUB_KEY = config('GITHUB_KEY')
+SOCIAL_AUTH_GITHUB_SECRET = config('GITHUB_SECRET')
+
+
+# SOCIAL_AUTH_PIPELINE = (
+# 'social_core.pipeline.user.user_details',
+# )
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -107,14 +157,26 @@ WSGI_APPLICATION = 'reviewpolite.wsgi.application'
 
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'politics',
+#         'USER': 'postgres',
+#         'PASSWORD': '123',
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'politics',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 

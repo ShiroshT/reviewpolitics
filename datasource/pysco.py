@@ -74,7 +74,8 @@ def create_tables_wiki():
           sections_wiki TEXT,
           summary_wiki TEXT,
           fecha_ini_det TIMESTAMP,
-          fecha_ini_f DATE
+          fecha_ini_f DATE,
+          slug VARCHAR(60)
         )
        """
         )
@@ -97,7 +98,10 @@ def create_tables_wiki():
     finally:
         if conn is not None:
             conn.close()
- 
+
+
+
+
 # stuff_in_string = "Shepherd {} is {} years old.".format(shepherd, age)
     # sql = """INSERT INTO vendors(vendor_name) VALUES(%s) RETURNING vendor_id;"""
    # sql = """INSERT INTO vendors(vendor_name)
@@ -114,56 +118,31 @@ def create_tables_wiki():
 
 
 # curs.execute("INSERT INTO sometable (col1, col2) VALUES (%s, %s)", (var1,var2))
+     # sql = "INSERT INTO candidates_wiki ({}) VALUES({}) RETURNING candidate_id;".format(field, page_val)
+     # sql = str(sql)
 
 
-def insert_records_wiki(field, link, page):
+def insert_records_wiki(link, page):
      params = config()
      conn = psycopg2.connect(**params)
      cur = conn.cursor()
 
-     if field == "url_wiki":
-        field_aux = 'url'
-       
-
-     elif field == "title_wiki":
-        field_aux = 'title'
-
-     elif field == "content_wiki":
-        field_aux = 'content'
-    
-     elif field == "images_wiki":
-        field_aux = 'images'
-
-     elif field == "references_wiki":
-        field_aux = 'references'
-
-     elif field == "links_wiki":
-        field_aux = 'links'
-
-     elif field == "sections_wiki":
-        field_aux = 'sections'
-
-     elif field == "summary_wiki":
-        field_aux = 'summary'
-
-     else:
-        field_aux = 'NA'
-    
-     page_val = "page" + "."+ field_aux
-
-
-     sql = "INSERT INTO candidates_wiki ({}) VALUES({}) RETURNING candidate_id;".format(field, page_val)
-     sql = str(sql)
-
      # time - calculation 
      ts = time.time()
      st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-     print st
+
      # date - calculation 
      today = datetime.date.today()
-     print today
 
+     # summary to display at search 
+     # summary_wiki = page.summary
+
+
+     # slug
+     candid =link
+     slug = candid.replace(' ', '')
      conn = None
+
      # vendor_id = None
      try:
         # read database configuration
@@ -175,8 +154,8 @@ def insert_records_wiki(field, link, page):
         # execute the INSERT statement
         cur.execute("""INSERT INTO candidates_wiki(candiate_name, 
             url_wiki, title_wiki, content_wiki, images_wiki, references_wiki, 
-            links_wiki,sections_wiki, summary_wiki, fecha_ini_det, fecha_ini_f) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )""",
-            (link, page.url, page.title, page.content, page.images, page.references, page.links, page.sections, page.summary, st, today))
+            links_wiki,sections_wiki, summary_wiki, fecha_ini_det, fecha_ini_f, slug) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )""",
+            (link, page.url, page.title, page.content, page.images, page.references, page.links, page.sections, page.summary, st, today, slug))
 
         # cur.execute(sql)
         # get the generated id back
@@ -196,11 +175,12 @@ def insert_records_wiki(field, link, page):
 def candidaterun(csvList):
 
         for cand_name in csvList[0]:
-            field_list = ["candidate_id", "candiate_name", "url_wiki", "title_wiki", "content_wiki", "images_wiki", "references_wiki","links_wiki", "sections_wiki", "summary_wiki"]
+            # field_list = ["candidate_id", "candiate_name", "url_wiki", "title_wiki", "content_wiki", "images_wiki", "references_wiki","links_wiki", "sections_wiki", "summary_wiki"]
             try:
                 page=wikipedia.page(cand_name, auto_suggest=False)
-                for field in field_list:
-                    insert_records_wiki(field, cand_name, page)
+                # for field in field_list:
+                insert_records_wiki(cand_name, page)
+                print "Still writing...."
 
             except wikipedia.exceptions.PageError:
                 #if a "PageError" was raised, ignore it and continue to next link
