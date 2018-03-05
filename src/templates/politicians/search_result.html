@@ -6,9 +6,22 @@
 <!-- https://docs.djangoproject.com/en/2.0/ref/templates/language/#template-inheritance -->
 
 {% block content %}
+
    <div class='container pt-5'>
         <div class='col-sm-12'>
+
+              <div id ='candidate-search-results'>
+              </div>
+              <a href ='#' id='loadmore-candidates-search-results'> Load more  Candidates</a>
+
+  </div>
+</div>
+
+<!--    <div class='container pt-5'>
+        <div class='col-sm-12'>
             {% if request.GET.q %}
+                <div id ='candidate-search-results'>
+              </div>
                		{% for object in object_list %}
                     <div class="media">
                           <div class="media-left'">
@@ -33,5 +46,8 @@
 
             {% endif %}
   </div>
+</div> -->
  <!-- <hr /> -->
 {% endblock content %}
+
+

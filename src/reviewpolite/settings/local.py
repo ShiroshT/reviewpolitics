@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     # 'crispy_forms',
-    # 'rest_framework',
+    'rest_framework',
 
     # 'accounts',
     # 'hashtags',

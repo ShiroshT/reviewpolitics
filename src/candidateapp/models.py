@@ -34,6 +34,7 @@ class Candidate(models.Model):
 
 
 
+
 class CandidatesWiki(models.Model):
     candidate_id = models.AutoField(primary_key=True)
     candiate_name = models.CharField(max_length=255)
@@ -62,4 +63,29 @@ class CandidatesWiki(models.Model):
     def get_absolute_url(self):
         return reverse("candidatesapp:candidatedetail", kwargs={"slug":self.slug})
 
-	
+
+
+
+# class CandidateAchivement(models.Model):
+#         id_candidate_achivement = models.ForeignKey(CandidatesWiki, related_name = 'achivement')
+#         achivement1 = models.TextField(max_length=500)
+#         achivement2 = models.TextField(max_length=500)
+#         achivement3 = models.TextField(max_length=500)
+#         achivement4 = models.TextField(max_length=500)
+#         achivement5 = models.TextField(max_length=500)
+
+class CandidateScore(models.Model):
+    id_candidate_score = models.ForeignKey(CandidatesWiki, related_name = 'score')
+    score = models.IntegerField()
+    up_votes = models.IntegerField()
+    down_votes = models.IntegerField()
+    userId = models.ForeignKey(User, related_name = 'score')
+
+
+class Reviews(models.Model):
+        userId = models.ForeignKey(settings.AUTH_USER_MODEL)
+        id_candidate_reivew = models.ForeignKey(CandidatesWiki, related_name = 'reviews')
+        header = models.CharField(max_length=500, unique=True)
+        review = models.CharField(max_length=500, unique=True)
+        date_of_review = models.DateTimeField(auto_now_add = True)
+

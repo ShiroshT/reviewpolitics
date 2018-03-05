@@ -44,7 +44,7 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
-    # url(r'^$', views.PolitListView.as_view(), name = 'home'),
+    url(r'^api/candidates/', include('candidateapp.api.urls', namespace='candiateapp-api')),
 ]
 
 
